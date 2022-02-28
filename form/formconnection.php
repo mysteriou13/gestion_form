@@ -1,4 +1,12 @@
-<form name="loginform" id="loginform" action="http://localhost/site_wordpress/wordpress/wp-login.php" method="post">
+<?php 
+
+$login = "http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']."/wp-login.php";
+
+$url = "http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
+
+?>
+
+<form name="loginform" id="loginform" action="<?php echo $login ?>" method="post">
 
 <div class = "flex-connection">
 			<div class="login-username">
@@ -14,7 +22,7 @@
       class="login-remember"><label><input name="rememberme" type="checkbox" id="rememberme" value="forever" /> Se souvenir de moi</label></div>
 			<div class="login-submit">
 				<input type="submit" name="wp-submit" id="wp-submit" class="button button-primary" value="Se connecter" />
-				<input type="hidden" name="redirect_to" value="http://localhost/site_wordpress/wordpress" />
+				<input type="hidden" name="redirect_to" value="<?php echo $url; ?>" />
 			</div>
 </div>
 
