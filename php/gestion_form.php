@@ -30,6 +30,11 @@ class gestion_form{
     
     }
 
+    function link_deconnection(){
+
+        session_destroy();
+
+    }
 
 
 }
