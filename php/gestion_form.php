@@ -22,10 +22,13 @@ class gestion_form{
 
          }
 
-          if(!isset($_SESSION['pseudo'])){
 
+          if(!isset($_SESSION['pseudo'])  || (!is_user_logged_in())  ){
+
+             
             include($link."/wp-content/plugins/gestion_form/form/formconnection.php");
-          }
+               
+        }
       
     
     }
