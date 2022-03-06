@@ -14,16 +14,7 @@ class gestion_form{
         
         $user_login = wp_authenticate($_POST["log"],$_POST['pwd'])->user_login;
 
-         if(isset($user_login) && !empty($user_login)){
-             
-            session_start();
-
-             $_SESSION['pseudo'] = $user_login;
-
-         }
-
-
-          if(!isset($_SESSION['pseudo'])  || (!is_user_logged_in())  ){
+          if(!is_user_logged_in()){
 
              
             include($link."/wp-content/plugins/gestion_form/form/formconnection.php");
