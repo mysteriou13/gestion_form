@@ -1,6 +1,7 @@
 <?php 
 
- $login = "http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']."wp-login.php";
+ $login = "http://".$_SERVER['HTTP_HOST']."/wp-login.php";
+
 
 $url = "http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
 
